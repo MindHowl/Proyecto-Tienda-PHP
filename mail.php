@@ -21,15 +21,15 @@
 	
 	ob_start();
 	?>
-		Hi imransdesign!<br /><br />
-		<?php echo ucfirst( $name ); ?>  has sent you a message via contact form on your website!
+		Hola soy MindHowl!<br /><br />
+		<?php echo ucfirst( $name ); ?>  te ha enviado un mensaje a traves del sitio web!
 		<br /><br />
 		
-		Name: <?php echo ucfirst( $name ); ?><br />
+		Nombre: <?php echo ucfirst( $name ); ?><br />
 		Email: <?php echo $from; ?><br />
-		Phone: <?php echo $phone; ?><br />
-		Subject: <?php echo $subject; ?><br />
-		Message: <br /><br />
+		Telefono: <?php echo $phone; ?><br />
+		Tema: <?php echo $subject; ?><br />
+		Mensaje: <br /><br />
 		<?php echo $message; ?>
 		<br />
 		<br />
@@ -43,9 +43,9 @@
 	$s = mail($to,$subject,$body,$headers,"-t -i -f $from");
 
 	if( $s == 1 ){
-		echo '<div class="success"><i class="fas fa-check-circle"></i><h3>Thank You!</h3>Your message has been sent successfully.</div>';
+		echo '<div class="success"><i class="fas fa-check-circle"></i><h3>Gracias!</h3>Tu mensaje ha sido enviado!.</div>';
 	}else{
-		echo '<div>Your message sending failed!</div>';
+		echo '<div>Tu mensaje no ha podido ser enviado!</div>';
 	}
 
 	
